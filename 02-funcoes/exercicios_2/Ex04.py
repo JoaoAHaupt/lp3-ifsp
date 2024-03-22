@@ -6,7 +6,7 @@ print('VOTE NOS SEGUINTES CANDIDATOS \n Latorre do Povo: 34 \n Quirino de taubat
 i = 0
 canditados = [0,0,0]
 
-for i in range(156000000):
+for i in range(12):
     voto = int (input('Coloque o número do seu candidato: '))
     if(voto == 34):
         print(' *PLIN PLIN PLIN * Voto computado LATORRE')
