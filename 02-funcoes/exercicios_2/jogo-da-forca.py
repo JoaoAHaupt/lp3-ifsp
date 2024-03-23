@@ -48,7 +48,7 @@ while True:
 
     tentativa = input('Entre com uma letra ').upper().strip()
 
-    if len(tentativa) > 1:
+    if len(tentativa) > 1 or not tentativa.isalpha():
         print('TENTATIVA INVÁLIDA \n')
     elif tentativa in letras or tentativa in letras_incorretas:
         print('Você já tentou essa letra! \n')
@@ -76,7 +76,6 @@ while True:
         print('\n' * 5)
         break
 
-    print('\n' * 100)
 
 
 
