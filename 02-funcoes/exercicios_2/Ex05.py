@@ -3,16 +3,18 @@ Ex05 - Verificador de Palíndromos: Solicite ao usuário que digite uma palavra 
 verifique se é um palíndromo (ou seja, pode ser lida de frente para trás e de trás para frente da mesma forma).
 '''
 import re
+import unicodedata
 
-# tirar a acentuação
-
-frase = input().lower().replace(' ', '')
-frase = re.sub(r'[^\w\s]', '', frase)
+frase = input('Digite uma frase: ')
+frase = unicodedata.normalize('NFD', frase)
+frase = frase.encode('ascii', 'ignore').decode('utf-8')
+frase = re.sub(r'[^\w\s]', '', frase.lower().replace(' ', ''))
 reverse = ''.join(reversed(frase))
 
-if frase == reverse:
-    print('Palindromo')
-else:
-    print('normie')
 print(frase)
 print(reverse)
+
+if frase == reverse:
+    print('A frase é um palíndromo!')
+else:
+    print('A frase NÃO é um palíndromo!')

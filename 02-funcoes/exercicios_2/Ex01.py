@@ -5,13 +5,13 @@
 import random
 numberRandom = random.randint(1, 100)
 print(numberRandom)
-while(True):
-    num = int (input('Entre com um número aleatório ' ))
-    if(num > numberRandom):
+while True:
+    num = int(input('Entre com um número aleatório ' ))
+    if num > numberRandom:
         print('Maior que o correto \n')
-    elif(num< numberRandom):
+    elif num < numberRandom:
             print('Menor que o correto \n')
-    elif(num==numberRandom):
+    elif num == numberRandom :
         print('VOCÊ ACERTOU')
         break
 
